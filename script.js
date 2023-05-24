@@ -9,7 +9,7 @@ task = task[0].toUpperCase()+task.slice(1);
 let li = document.createElement("li");
 li.classList.add("newnote");
 li.innerHTML=`<h4 id="note">${task}</h4>
-<button class="editbtn" onclick="editNote(this)">&#128393;</button>
+<button class="editbtn" onclick="editNote(this)">&#9998;</button>
 <button class="deletebtn" onclick="deleteNote(this)">&#128465;</button>`;
 let cb = document.createElement("input");
 cb.setAttribute("type","checkbox");
@@ -30,7 +30,7 @@ addBtn.addEventListener('click',() => {
         let li = document.createElement("li");
         li.classList.add("newnote");
         li.innerHTML=`<h4 id="note">${newNote}</h4>
-        <button class=editbtn onclick="editNote(this)">&#128393;</button>
+        <button class=editbtn onclick="editNote(this)">&#9998;</button>
         <button class=deletebtn onclick="deleteNote(this)">&#128465;</button>`;
         let cb = document.createElement("input");
         cb.setAttribute("type","checkbox");
@@ -55,7 +55,7 @@ let editNote = (thisEle)=>{
     console.log(tasklist[index]);
     console.log(index)
     if(thisEle.textContent === "✔"){
-        thisEle.textContent = "🖉";
+        thisEle.textContent = "✎";
         let newNote = thisEle.previousElementSibling.value;
         let currentValue = document.createElement("h4");
         currentValue.id = "note";
