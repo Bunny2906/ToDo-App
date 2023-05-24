@@ -107,12 +107,13 @@ ul input[type=checkbox]:checked + li .editbtn{
     }
     #add{
         position: relative;
-        right: 110px;
+        right: 60px;
         font-size: 14px;    
         padding: 7px 15px;
     }
     input{
         padding: 5px;
+        padding-right: 30px;
     }
     h4{
         font-size: 12px;
