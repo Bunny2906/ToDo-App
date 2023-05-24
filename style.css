@@ -116,6 +116,6 @@ ul input[type=checkbox]:checked + li .editbtn{
         font-size: 12px;
     }
     .editbtn{
-        padding: 3px 20px;
+        padding: 3px 15px;
     }
 }
