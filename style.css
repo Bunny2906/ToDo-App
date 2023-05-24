@@ -37,6 +37,7 @@ input{
 input::placeholder{
     color: black;
     font-weight: 600;
+    opacity: 0.8;
 }
 button{
     padding: 10px 40px;
@@ -73,7 +74,7 @@ ul{
 }
 li{
     display: grid;
-    grid-template-columns: 10fr 1fr 1fr;
+    grid-template-columns: 8fr 1fr 1fr;
     list-style: none;
     align-items: center;
 }
@@ -104,8 +105,8 @@ ul input[type=checkbox]:checked + li .editbtn{
     }
     #add{
         position: relative;
-        right: 40px;
-        font-size: 14px;
+        right: 50px;
+        font-size: 14px;    
         padding: 7px 15px;
     }
     input{
