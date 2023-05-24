@@ -77,7 +77,7 @@ let editNote = (thisEle)=>{
         var x = window.matchMedia("(max-width: 480px)");
         if(x.matches)
         {
-            editableInput.style.width="40%";
+            editableInput.style.width="55%";
         }
         thisEle.parentElement.replaceChild(editableInput,thisEle.previousElementSibling);
     }
