@@ -23,6 +23,8 @@ addBtn.addEventListener('click',() => {
     }
     else{
         inptext.value = '';
+        newNote = newNote.toLowerCase();
+        newNote = newNote[0].toUpperCase()+newNote.slice(1);
         tasklist.push(newNote);
         localStorage.setItem('data',JSON.stringify(tasklist));
         let li = document.createElement("li");
@@ -45,8 +47,13 @@ let deleteNote = (thisEle)=>{
     thisEle.parentElement.previousElementSibling.remove();
     thisEle.parentElement.remove()
 }
-
+let indexArray = [];
 let editNote = (thisEle)=>{
+    const index = tasklist.indexOf(thisEle.parentElement.children[0].textContent)
+    console.log(thisEle.parentElement.children[0])
+    indexArray.push(index);
+    console.log(tasklist[index]);
+    console.log(index)
     if(thisEle.textContent === "✔"){
         thisEle.textContent = "🖉";
         let newNote = thisEle.previousElementSibling.value;
@@ -54,10 +61,10 @@ let editNote = (thisEle)=>{
         currentValue.id = "note";
         currentValue.textContent = newNote;
         thisEle.parentElement.replaceChild(currentValue,thisEle.previousElementSibling);
-        const index = tasklist.indexOf(thisEle.parentElement.children[0].textContent)
-        tasklist[index] = newNote;
-        console.log(tasklist[index]);
+        tasklist[indexArray[0]] = newNote;
+        console.log(tasklist);
         localStorage.setItem('data',JSON.stringify(tasklist));
+        indexArray = [];
     }
     else{
         thisEle.textContent = "✔";
