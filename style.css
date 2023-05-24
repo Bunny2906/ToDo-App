@@ -49,7 +49,7 @@ button{
 }
 .editbtn{
     background: linear-gradient(135deg,#d04d1a,#c17746);
-    padding: 3px 1px;
+    padding: 3px 5px;
     border-radius: 5px;
     margin: 5px;
     cursor: pointer;
@@ -68,9 +68,8 @@ ul{
     display: grid;
     grid-template-columns: 0.5fr 6fr;
     align-items: center;
-    position: relative;
-    right: 35px;
     width: 100%;
+    padding-inline-start: 0;
 }
 li{
     display: grid;
@@ -88,6 +87,7 @@ input[type=checkbox]{
 }
 ul input[type=checkbox]:checked{
     pointer-events: none;
+    background-color: green;
 }
 ul input[type=checkbox]:checked + li h4{
     text-decoration: line-through;
@@ -105,14 +105,17 @@ ul input[type=checkbox]:checked + li .editbtn{
     }
     #add{
         position: relative;
-        right: 50px;
+        right: 70px;
         font-size: 14px;    
         padding: 7px 15px;
     }
     input{
-        padding: 5px;
+        padding: 5px 50px;
     }
     h4{
         font-size: 12px;
+    }
+    .editbtn{
+        padding: 3px 20px;
     }
 }
