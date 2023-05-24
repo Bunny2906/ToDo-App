@@ -67,6 +67,7 @@ button:active{
 ul{
     display: grid;
     grid-template-columns: 0.5fr 6fr;
+    grid-auto-rows: 70px;
     align-items: center;
     width: 100%;
     padding-inline-start: 0;
@@ -101,8 +102,8 @@ ul input[type=checkbox]:checked + li .editbtn{
         padding: 20px;
     }
     .row{
-        width: 90%;
-        padding-right: 50px;
+        width: 55%;
+        padding-right: 100px;
     }
     #add{
         position: relative;
