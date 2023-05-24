@@ -74,6 +74,11 @@ let editNote = (thisEle)=>{
         editableInput.setAttribute("type","text");
         editableInput.value = task;
         editableInput.style.border = "1px solid black";
+        var x = window.matchMedia("(max-width: 480px)");
+        if(x.matches)
+        {
+            editableInput.style.width="60%";
+        }
         thisEle.parentElement.replaceChild(editableInput,thisEle.previousElementSibling);
     }
 }
