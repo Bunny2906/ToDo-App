@@ -86,10 +86,9 @@ input[type=checkbox]{
     width: 18px;
     cursor: pointer;
 }
-ul input[type=checkbox]:checked{
+/* ul input[type=checkbox]:checked{
     pointer-events: none;
-    background-color: green;
-}
+} */
 ul input[type=checkbox]:checked + li h4{
     text-decoration: line-through;
 }
